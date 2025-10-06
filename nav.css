@@ -36,3 +36,104 @@
  @media (max-width: 900px) {
     .nav { width:48px; height:48px; }
  }
+
+/* Fullscreen fixes: ensure the fullscreen element and html/body fill viewport
+    and keep nav controls positioned correctly without extra space. */
+
+/* Make sure document roots don't introduce extra spacing */
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   /* center the slide both horizontally and vertically so when the
+       browser goes fullscreen (F11) the fixed-size slide stays centered */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+}
+
+/* When an element enters fullscreen, ensure it and its children use full height. */
+:fullscreen, /* Standard */
+:-webkit-full-screen, /* Safari/Chrome */
+:-moz-full-screen, /* Firefox */
+:-ms-fullscreen { /* IE/Edge */
+   width: 100% !important;
+   height: 100% !important;
+   min-height: 100% !important;
+   margin: 0 !important;
+   padding: 0 !important;
+   box-sizing: border-box !important;
+}
+
+/* If your slide container has a class like .slide or .deck, target it too.
+    These generic rules help when the fullscreened element is a child element. */
+.slide:fullscreen, .deck:fullscreen,
+.slide:-webkit-full-screen, .deck:-webkit-full-screen {
+   height: 100% !important;
+   min-height: 100% !important;
+}
+
+/* Allow the fixed-size slide to scale down to fit the viewport so there's
+    no extra gap when the browser or element is fullscreen. Keeps original
+    design dimensions as max defaults. */
+.slide {
+   box-sizing: border-box;
+   /* keep the designed size but never exceed viewport */
+   max-width: calc(100vw - 40px);
+   max-height: calc(100vh - 40px);
+   /* preserve original pixel size as preferred size */
+   width: 1280px;
+   height: 720px;
+   margin: 0; /* vertical centering handled by body flex */
+   overflow: hidden;
+}
+
+/* Make slide content flexible if the slide is constrained */
+.slide .content {
+   max-height: calc(100vh - 160px);
+   height: auto !important;
+   overflow: auto;
+}
+
+/* Keep nav buttons visually anchored in fullscreen. Use bottom offsets
+    relative to the viewport avoiding transforms that can create gaps. */
+/* Keep nav buttons visually anchored in fullscreen. Use bottom offsets
+   relative to the viewport; include vendor-prefixed pseudo-classes. */
+:fullscreen .nav,
+:-webkit-full-screen .nav,
+:-moz-full-screen .nav,
+:-ms-fullscreen .nav {
+  position: fixed;
+  bottom: 24px;
+  /* left/right preserved by existing .prev/.next rules */
+  z-index: 99999;
+}
+
+/* Allow fullscreened elements to scroll if their content is larger than the viewport. */
+:fullscreen,
+:-webkit-full-screen,
+:-moz-full-screen,
+:-ms-fullscreen {
+   overflow: auto !important;
+   -webkit-overflow-scrolling: touch;
+}
+
+/* If the slide is constrained smaller than its design, allow the slide itself
+    to scroll so content isn't inaccessible. */
+.slide {
+   /* existing rules above remain; enable scrolling when max-height is applied */
+   overflow: auto;
+}
+
+/* Hide scrollbars but keep scrolling functional */
+.slide::-webkit-scrollbar,
+ :fullscreen::-webkit-scrollbar,
+ :-webkit-full-screen::-webkit-scrollbar {
+   display: none;
+}
+
+.slide, :fullscreen, :-webkit-full-screen, :-moz-full-screen {
+   -ms-overflow-style: none; /* IE and Edge */
+   scrollbar-width: none; /* Firefox */
+}
