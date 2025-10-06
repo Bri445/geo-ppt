@@ -4,11 +4,15 @@
   function currentIndex(){
     var p = window.location.pathname.replace(/\\/g,'/');
     var name = p.split('/').pop();
+    // treat index.html or empty filename as page 1
+    if(!name || name==='index.html') return 1;
     var m = name.match(/(\d+)\.html$/);
     return m ? parseInt(m[1],10) : null;
   }
 
   function fileFor(i){ return i + '.html'; }
+  // Map page 1 to index.html so hosting platforms (like Vercel) serve the root correctly
+  function fileFor(i){ return i===1 ? 'index.html' : (i + '.html'); }
 
   function goTo(i){ if(i==null) return; window.location.href = fileFor(i); }
 
