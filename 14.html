@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Future Prospects &amp; Global Opportunities</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin: 0 auto; /* center the slide horizontally */
+        }
+        .header {
+            background-color: #1a5f9e;
+            padding: 20px 60px;
+            color: white;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 36px;
+            margin: 0;
+        }
+        .content-container {
+            display: flex;
+            flex: 1;
+            padding: 40px 0;
+        }
+        .text-content {
+            width: 50%;
+            padding: 0 60px;
+        }
+        .visual-content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .bullet-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .bullet-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            background-color: #1a5f9e;
+            border-radius: 50%;
+        }
+        .growth-chart {
+            width: 450px;
+            height: 450px;
+            position: relative;
+        }
+        .growth-milestone {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 600;
+        }
+        .milestone-2024 {
+            background-color: rgba(26, 95, 158, 0.2);
+            bottom: 30px;
+            left: 30px;
+        }
+        .milestone-2030 {
+            background-color: rgba(26, 95, 158, 0.6);
+            color: white;
+            top: 30px;
+            right: 30px;
+            font-size: 18px;
+        }
+        .milestone-year {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .milestone-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+        .growth-arrow {
+            position: absolute;
+            width: 300px;
+            height: 20px;
+            background-color: #1a5f9e;
+            top: 50%;
+            left: 125px;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .growth-arrow:after {
+            content: "";
+            position: absolute;
+            right: -25px;
+            top: -15px;
+            width: 0;
+            height: 0;
+            border-left: 30px solid #1a5f9e;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+        }
+        .growth-area {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(26, 95, 158, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .growth-icon {
+            font-size: 36px;
+            color: #1a5f9e;
+        }
+        .area-biologics {
+            top: 70px;
+            left: 90px;
+        }
+        .area-exports {
+            bottom: 70px;
+            right: 90px;
+        }
+        .footer {
+            height: 10px;
+            background-color: #1a5f9e;
+        }
+    </style>
+</head>
+<body>
+<div class="slide">
+<div class="header">
+<h1 class="title">Future Prospects &amp; Global Opportunities</h1>
+</div>
+<div class="content-container">
+<div class="text-content">
+<ul class="bullet-list">
+<li class="bullet-item">Market projected to reach $130 billion by 2030 (2.2x growth)</li>
+<li class="bullet-item">Exports potential to double to $60-65 billion by 2030</li>
+<li class="bullet-item">Growth in biologics, biosimilars, and complex generics</li>
+<li class="bullet-item">Expanding vaccine manufacturing capabilities</li>
+<li class="bullet-item">Increasing R&amp;D investments for innovative drug development</li>
+</ul>
+</div>
+<div class="visual-content">
+<div class="growth-chart">
+<div class="growth-arrow"></div>
+<div class="growth-milestone milestone-2024">
+<div class="milestone-year">2024</div>
+<div class="milestone-value">$65 Billion</div>
+</div>
+<div class="growth-milestone milestone-2030">
+<div class="milestone-year">2030</div>
+<div class="milestone-value">$130 Billion</div>
+</div>
+<div class="growth-area area-biologics">
+<i class="fas fa-dna growth-icon"></i>
+</div>
+<div class="growth-area area-exports">
+<i class="fas fa-globe-asia growth-icon"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="footer"></div>
+</div>
+<!-- navigation controls -->
+<a id="nav-prev" class="nav prev disabled" aria-label="Previous"><i class="fas fa-arrow-left"></i></a>
+<a id="nav-next" class="nav next disabled" aria-label="Next"><i class="fas fa-arrow-right"></i></a>
+<link rel="stylesheet" href="nav.css">
+<script src="nav.js"></script>
+</body>
+</html>

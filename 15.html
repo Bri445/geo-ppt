@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Environmental &amp; Ethical Considerations</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+        .slide {
+            /* make slide responsive: fill available width but don't exceed design width */
+            width: 100%;
+            max-width: 1280px;
+            min-height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin: 0 auto; /* center the slide horizontally */
+        }
+        .header {
+            background-color: #1a5f9e;
+            padding: 20px 60px;
+            color: white;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 36px;
+            margin: 0;
+        }
+        .content-container {
+            display: flex;
+            flex: 1;
+            padding: 40px 0;
+        }
+        .text-content {
+            width: 50%;
+            padding: 0 60px;
+        }
+        .visual-content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .bullet-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .bullet-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            background-color: #1a5f9e;
+            border-radius: 50%;
+        }
+        .pharma-icons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+            padding: 20px;
+        }
+        .icon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .icon-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: rgba(26, 95, 158, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .icon {
+            font-size: 56px;
+            color: #1a5f9e;
+        }
+        .icon-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #1a5f9e;
+        }
+        .footer {
+            height: 10px;
+            background-color: #1a5f9e;
+        }
+    </style>
+</head>
+<body>
+<div class="slide">
+<div class="header">
+<h1 class="title">Environmental &amp; Ethical Considerations</h1>
+</div>
+<div class="content-container">
+<div class="text-content">
+<ul class="bullet-list">
+<li class="bullet-item">Pharmaceutical manufacturing generates significant pollution and waste</li>
+<li class="bullet-item">Water contamination through active pharmaceutical ingredients (APIs)</li>
+<li class="bullet-item">Geographic disparities in drug availability and pricing</li>
+<li class="bullet-item">Industry push toward sustainable "green pharmacy" practices</li>
+<li class="bullet-item">Ethical considerations in clinical trials and drug distribution</li>
+</ul>
+</div>
+<div class="visual-content">
+<div class="pharma-icons">
+<div class="icon-box">
+<div class="icon-circle">
+<i class="fas fa-leaf icon"></i>
+</div>
+<div class="icon-text">Environmental Impact</div>
+</div>
+<div class="icon-box">
+<div class="icon-circle">
+<i class="fas fa-recycle icon"></i>
+</div>
+<div class="icon-text">Sustainability</div>
+</div>
+<div class="icon-box">
+<div class="icon-circle">
+<i class="fas fa-balance-scale icon"></i>
+</div>
+<div class="icon-text">Ethics</div>
+</div>
+<div class="icon-box">
+<div class="icon-circle">
+<i class="fas fa-hands-helping icon"></i>
+</div>
+<div class="icon-text">Accessibility</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer"></div>
+</div>
+<!-- navigation controls -->
+<a id="nav-prev" class="nav prev disabled" aria-label="Previous"><i class="fas fa-arrow-left"></i></a>
+<a id="nav-next" class="nav next disabled" aria-label="Next"><i class="fas fa-arrow-right"></i></a>
+<link rel="stylesheet" href="nav.css">
+<script src="nav.js"></script>
+</body>
+</html>

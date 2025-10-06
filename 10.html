@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Impact of Geography &amp; Infrastructure on Pharma Distribution</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+    }
+    .slide {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        margin: 0 auto; /* center the slide horizontally */
+    }
+    .header {
+        background-color: #1a5f9e;
+        padding: 20px 60px;
+        color: white;
+    }
+    .title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        margin: 0;
+    }
+    .content-container {
+        display: flex;
+        flex: 1;
+        padding: 30px 0;
+    }
+    .sidebar {
+        width: 30%;
+        padding: 0 30px 0 60px;
+    }
+    .map-container {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 60px;
+    }
+    .map-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .bullet-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .bullet-item {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .bullet-item:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        background-color: #1a5f9e;
+        border-radius: 50%;
+    }
+    .key-point {
+        font-weight: 600;
+        color: #1a5f9e;
+    }
+    .footer {
+        height: 10px;
+        background-color: #1a5f9e;
+    }
+    .infrastructure-info {
+        margin-top: 40px;
+        border-top: 2px solid #e0e0e0;
+        padding-top: 20px;
+    }
+    .infrastructure-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #1a5f9e;
+        margin-bottom: 10px;
+    }
+    .visualization-container {
+        position: relative;
+        background-color: #f7f9fc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .legend {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .legend-item {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    .legend-color {
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        border-radius: 2px;
+    }
+    .route {
+        stroke: #1a5f9e;
+        stroke-width: 3;
+        stroke-dasharray: none;
+    }
+    .route-air {
+        stroke: #e74c3c;
+        stroke-dasharray: 5,5;
+    }
+    .hub-point {
+        fill: #1a5f9e;
+        stroke: white;
+        stroke-width: 2;
+    }
+    .hub-text {
+        font-size: 12px;
+        font-weight: 600;
+        fill: #333;
+    }
+    .challenge-box {
+        background-color: rgba(26, 95, 158, 0.1);
+        border-left: 4px solid #1a5f9e;
+        padding: 15px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+</style>
+<body>
+<div class="slide">
+<div class="header">
+<h1 class="title">Impact of Geography &amp; Infrastructure on Pharma Distribution</h1>
+</div>
+<div class="content-container">
+<div class="sidebar">
+<ul class="bullet-list">
+<li class="bullet-item"><span class="key-point">Diverse Geography:</span> Mountains in north, coastal areas, plains and plateaus affect transportation networks</li>
+<li class="bullet-item"><span class="key-point">Infrastructure Hubs:</span> Major pharma clusters near ports (Mumbai, Vizag) and metro cities (Hyderabad, Delhi NCR)</li>
+<li class="bullet-item"><span class="key-point">Cold Chain:</span> Critical for vaccines and biologics, concentrated in metro areas</li>
+<li class="bullet-item"><span class="key-point">Last-mile Challenges:</span> Rural and remote areas face significant accessibility issues</li>
+</ul>
+<div class="infrastructure-info">
+<div class="infrastructure-title">Cold Chain Capacity</div>
+<div>Over 90% of India's pharmaceutical cold storage infrastructure is concentrated in tier-1 and tier-2 cities, creating distribution challenges for temperature-sensitive medications in rural areas</div>
+</div>
+<div class="challenge-box">
+Geography directly impacts logistics costs, which can represent 2-3% of total sales value for Indian pharmaceutical companies
+</div>
+</div>
+<div class="map-container">
+<div class="visualization-container">
+<svg height="400" viewbox="0 0 600 500" width="100%">
+<!-- Map outline of India (simplified) -->
+<path d="M300,100 C380,120 450,200 470,300 C480,360 450,420 400,450 C320,495 220,490 160,440 C120,400 110,320 130,250 C150,180 220,130 300,100" fill="#f0f6ff" stroke="#1a5f9e" stroke-width="2"></path>
+<!-- Major distribution routes -->
+<line class="route" x1="300" x2="400" y1="180" y2="300"></line>
+<line class="route" x1="300" x2="200" y1="180" y2="300"></line>
+<line class="route" x1="300" x2="300" y1="180" y2="350"></line>
+<line class="route" x1="400" x2="350" y1="300" y2="380"></line>
+<line class="route" x1="200" x2="250" y1="300" y2="380"></line>
+<!-- Air routes -->
+<line class="route route-air" x1="300" x2="380" y1="180" y2="200"></line>
+<line class="route route-air" x1="300" x2="220" y1="180" y2="200"></line>
+<line class="route route-air" x1="300" x2="300" y1="180" y2="120"></line>
+<!-- Pharma hubs -->
+<circle class="hub-point" cx="300" cy="180" r="10"></circle>
+<text class="hub-text" x="310" y="160">Delhi NCR</text>
+<circle class="hub-point" cx="400" cy="300" r="10"></circle>
+<text class="hub-text" x="410" y="305">Mumbai</text>
+<circle class="hub-point" cx="200" cy="300" r="8"></circle>
+<text class="hub-text" x="150" y="305">Ahmedabad</text>
+<circle class="hub-point" cx="300" cy="350" r="8"></circle>
+<text class="hub-text" x="310" y="355">Hyderabad</text>
+<circle class="hub-point" cx="350" cy="380" r="6"></circle>
+<text class="hub-text" x="360" y="385">Chennai</text>
+<circle class="hub-point" cx="250" cy="380" r="6"></circle>
+<text class="hub-text" x="210" y="385">Bengaluru</text>
+<!-- Small distribution points -->
+<circle class="hub-point" cx="380" cy="200" r="4"></circle>
+<circle class="hub-point" cx="220" cy="200" r="4"></circle>
+<circle class="hub-point" cx="300" cy="120" r="4"></circle>
+</svg>
+<div class="legend">
+<div class="legend-item">
+<div class="legend-color" style="background-color:#1a5f9e;"></div>
+<span>Major Road Routes</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color:#e74c3c;"></div>
+<span>Air Transport Routes</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color:#1a5f9e; border:1px solid white"></div>
+<span>Distribution Hubs</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer"></div>
+</div>
+<!-- navigation controls -->
+<a id="nav-prev" class="nav prev disabled" aria-label="Previous"><i class="fas fa-arrow-left"></i></a>
+<a id="nav-next" class="nav next disabled" aria-label="Next"><i class="fas fa-arrow-right"></i></a>
+<link rel="stylesheet" href="nav.css">
+<script src="nav.js"></script>
+</body>
+</html>

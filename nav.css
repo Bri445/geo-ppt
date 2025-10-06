@@ -1,0 +1,38 @@
+/* Shared navigation controls for slides */
+ .nav-controls {
+    pointer-events: none;
+ }
+ .nav {
+    position: fixed;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    background: #1a5f9e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 9999;
+    pointer-events: auto;
+    box-shadow: 0 6px 18px rgba(26,95,158,0.25);
+ }
+ .nav.prev {
+    left: 28px;
+ }
+ .nav.next {
+    right: 28px;
+ }
+ .nav.disabled {
+    opacity: 0.35;
+    background: #777;
+    pointer-events: none;
+ }
+ .nav i {
+    font-size: 20px;
+ }
+ @media (max-width: 900px) {
+    .nav { width:48px; height:48px; }
+ }

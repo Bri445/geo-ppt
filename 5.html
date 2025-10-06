@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Major Pharmaceutical Hubs in India</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+    }
+    .slide {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+            margin: 0 auto; /* center the slide horizontally */
+    }
+    .header {
+        background-color: #1a5f9e;
+        padding: 20px 60px;
+        color: white;
+    }
+    .title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        margin: 0;
+    }
+    .content-container {
+        display: flex;
+        flex: 1;
+        padding: 30px 0;
+    }
+    .sidebar {
+        width: 30%;
+        padding: 0 30px 0 60px;
+    }
+    .map-container {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 60px;
+    }
+    .map-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .map-overlay {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .hub-marker {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #1a5f9e;
+        border: 3px solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px #1a5f9e;
+    }
+    .hub-label {
+        position: absolute;
+        background-color: rgba(26, 95, 158, 0.9);
+        color: white;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .bullet-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .bullet-item {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .bullet-item:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        background-color: #1a5f9e;
+        border-radius: 50%;
+    }
+    .key-hub {
+        font-weight: 600;
+        color: #1a5f9e;
+    }
+    .footer {
+        height: 10px;
+        background-color: #1a5f9e;
+    }
+    .hub-info {
+        margin-top: 40px;
+        border-top: 2px solid #e0e0e0;
+        padding-top: 20px;
+    }
+    .hub-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #1a5f9e;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+<div class="slide">
+<div class="header">
+<h1 class="title">Major Pharmaceutical Hubs in India</h1>
+</div>
+<div class="content-container">
+<div class="sidebar">
+<ul class="bullet-list">
+<li class="bullet-item"><span class="key-hub">Hyderabad</span>: 'Vaccine Hub of India', home to over 200 pharma companies</li>
+<li class="bullet-item"><span class="key-hub">Gujarat</span>: Major manufacturing hub for bulk drugs and formulations</li>
+<li class="bullet-item"><span class="key-hub">Mumbai-Pune</span>: Corporate headquarters and R&amp;D centers</li>
+<li class="bullet-item"><span class="key-hub">Bengaluru</span>: Biotech and innovative pharmaceutical research</li>
+<li class="bullet-item"><span class="key-hub">Baddi</span> (Himachal Pradesh): Tax incentives driving manufacturing growth</li>
+</ul>
+<div class="hub-info">
+<div class="hub-title">Hyderabad Pharma City</div>
+<div>World's largest integrated pharmaceutical facility sprawling over 19,000 acres, positioning India as a global leader in affordable medicine production</div>
+</div>
+</div>
+<div class="map-container">
+<div class="map-overlay">
+<img alt="India Pharmaceutical Clusters Map" class="map-image" src="https://page.gensparksite.com/slides_images/5a59a4d7f30b12ce2c00bbb72ee0882d.jpg"/>
+</div>
+</div>
+</div>
+<div class="footer"></div>
+</div>
+<!-- navigation controls -->
+<a id="nav-prev" class="nav prev disabled" aria-label="Previous"><i class="fas fa-arrow-left"></i></a>
+<a id="nav-next" class="nav next disabled" aria-label="Next"><i class="fas fa-arrow-right"></i></a>
+<link rel="stylesheet" href="nav.css">
+<script src="nav.js"></script>
+</body>
+</html>

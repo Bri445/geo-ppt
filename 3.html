@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pharmaceutical Industry in Global Trade</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin: 0 auto; /* center the slide horizontally */
+        }
+        .header {
+            background-color: #1a5f9e;
+            padding: 20px 60px;
+            color: white;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 36px;
+            margin: 0;
+        }
+        .content-container {
+            display: flex;
+            flex: 1;
+            padding: 40px 0;
+        }
+        .text-content {
+            width: 50%;
+            padding: 0 60px;
+        }
+        .visual-content {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+        }
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .bullet-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .bullet-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            background-color: #1a5f9e;
+            border-radius: 50%;
+        }
+        .chart-container {
+            width: 90%;
+            height: 350px;
+        }
+        .stat-highlight {
+            font-weight: 600;
+            color: #1a5f9e;
+        }
+        .footer {
+            height: 10px;
+            background-color: #1a5f9e;
+        }
+        .chart-caption {
+            font-size: 16px;
+            text-align: center;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<div class="slide">
+<div class="header">
+<h1 class="title">Pharmaceutical Industry in Global Trade</h1>
+</div>
+<div class="content-container">
+<div class="text-content">
+<ul class="bullet-list">
+<li class="bullet-item">Global market valued at <span class="stat-highlight">$1.7 trillion</span> (2024)</li>
+<li class="bullet-item">North America accounts for <span class="stat-highlight">53%</span> of global pharmaceutical market</li>
+<li class="bullet-item">Critical for international trade and public health systems</li>
+<li class="bullet-item">Employs millions across research, manufacturing, and distribution</li>
+<li class="bullet-item">Contributes significantly to economic growth and development</li>
+</ul>
+</div>
+<div class="visual-content">
+<div class="chart-container">
+<canvas id="marketShareChart"></canvas>
+</div>
+<p class="chart-caption">Global Pharmaceutical Market Share by Region (2024)</p>
+</div>
+</div>
+<div class="footer"></div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('marketShareChart').getContext('2d');
+        const marketShareChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['North America', 'Europe', 'China', 'Japan', 'Rest of World'],
+                datasets: [{
+                    data: [53, 22, 8, 7, 10],
+                    backgroundColor: [
+                        '#1a5f9e',
+                        '#3f88c5',
+                        '#5ca5d8',
+                        '#8ec3e6',
+                        '#b6d7f0'
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                family: 'Open Sans',
+                                size: 14
+                            },
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+<!-- navigation controls -->
+<a id="nav-prev" class="nav prev disabled" aria-label="Previous"><i class="fas fa-arrow-left"></i></a>
+<a id="nav-next" class="nav next disabled" aria-label="Next"><i class="fas fa-arrow-right"></i></a>
+<link rel="stylesheet" href="nav.css">
+<script src="nav.js"></script>
+</body>
+</html>
